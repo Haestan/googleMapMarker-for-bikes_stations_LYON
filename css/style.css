@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Open Sans Condensed", sans-serif;
+  background: #fefff3;
+  overflow-x: hidden;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0px 1px 5px #32343c;
+  background: #41413F;
+  color: #ecf0f1;
+}
+nav img {
+  height: 100px;
+  width: 100px;
+}
+nav #btn-responsive {
+  color: #ecf0f1;
+}
+nav ul li a {
+  color: #ecf0f1;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+.list-menu-items .list-menu a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+.btn {
+  top: 200px;
+  right: 20px;
+  height: 2px;
+  width: 5px;
+  color: #ecf0f1;
+}
+
+.content-information {
+  padding-top: 200px;
+  text-align: center;
+}
+.content-information img {
+  padding: 55px;
+}
+.content-information h2 {
+  padding: 40px;
+}
+
+#home h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#fonction p {
+  text-align: center;
+  color: #ecf0f1;
+  padding-top: 20px;
+}
+
+#min-explain {
+  display: none;
+}
+
+.slideshow {
+  height: 700px;
+  background: #41413F;
+}
+.slideshow h2 {
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: underline;
+  color: #ecf0f1;
+}
+.slideshow h6 {
+  text-align: center;
+  color: #ecf0f1;
+  padding-top: 20px;
+}
+.slideshow ul {
+  list-style: none;
+}
+
+.slider {
+  border: 1px solid #ecf0f1;
+  box-shadow: 2px 2px 5px #ecf0f1;
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+}
+
+#slider {
+  position: absolute;
+  top: 0;
+}
+
+#slider2 {
+  position: absolute;
+  top: 0;
+}
+
+#slider3 {
+  position: absolute;
+  top: 0;
+}
+
+.title-app {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-molette {
+  text-align: center;
+}
+
+.button-hide-reservation {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 150px;
+  display: block;
+  text-align: center;
+  border: 1px solid #ecf0f1;
+  color: #ecf0f1;
+  box-sizing: border-box;
+  background: #41413F;
+  cursor: pointer;
+}
+.button-hide-reservation:hover {
+  transform: translateY(-2%);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+#app {
+  position: relative;
+}
+
+#map {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 700px;
+  margin-bottom: 20px;
+}
+
+#getReservation {
+  position: absolute;
+  top: 0;
+  right: 75px;
+  width: 500px;
+  height: 100%;
+  background: #41413F;
+  color: #ecf0f1;
+  text-align: center;
+  border: 2px solid #181821;
+  padding: 25px;
+}
+
+#statut {
+  text-align: center;
+}
+
+form {
+  padding: 10px;
+  margin: 15px;
+  text-align: left;
+}
+form p {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.signature {
+  display: none;
+}
+
+#canvas {
+  display: flex;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  background: #ecf0f1;
+  border: 3px solid black;
+}
+
+.reservation-window div {
+  display: inline-block;
+  width: 100px;
+  margin: 0 auto;
+  color: #ecf0f1;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#Reservation {
+  background: #2bae00;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+
+#recommencer {
+  background: #c57117;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#recommencer:hover {
+  transform: scale(1.1);
+}
+
+.reservation {
+  position: relative;
+  height: 400px;
+  background: #41413F;
+}
+
+#reserv h2 {
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: underline;
+  color: #ecf0f1;
+}
+
+#title-reservation {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #ecf0f1;
+  line-height: 200px;
+}
+
+#annuler {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  background: #7a0300;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+#title-reservation {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #ecf0f1;
+  line-height: 100px;
+}
+
+#count-timer {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+#circle {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  padding-top: 2px;
+  border-radius: 50%;
+  font-size: 25px;
+  background: #41413F;
+  text-align: center;
+  cursor: pointer;
+  z-index: 15000;
+  color: #ecf0f1;
+}
+

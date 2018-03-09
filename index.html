@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>
+<html class="ie ie7 lte9 lte8 lte7" lang="fr"><![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 lte9 lte8" lang="fr">    <![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9 lte9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr">
+<!--<![endif]-->
+
+<head>
+    <title>Réservation de Vélib à Paris</title>
+
+    <!-- meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- font-awesome -->
+    <!--<script src="https://use.fontawesome.com/066aff1d15.js"></script>-->
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!--javascript-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="InitThis();">
+    <!--HEADER-->
+    <div class="container-fluid header">
+
+        <!--MENU FIXE-->
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container">
+                <img src="img/logo.png" alt="">
+                <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="btn-responsive">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" id="accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" id="fonctionnement">Fonctionnement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" id="application">Application</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" id="reservation-ancre">Réservation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--END MENU FIXE-->
+
+        <!--INFORMATIONS-->
+        <section class="content-information" id="home">
+            <h1>Bienvenue chez
+                <strong>FLAT BYCYCLE</strong> ! LE site de réservation de vélib dans tout Paris !</h1>
+            <img src="img/plato2.png" alt="">
+            <h2>Localisez > Réservez > Roulez !</h2>
+        </section>
+        <!--END INFORMATIONS-->
+    </div>
+    <!--END HEADER-->
+
+    <!--SLIDER-->
+    <section class="container-fluid slideshow" id="fonction">
+        <h2>FONCTIONNEMENT</h2>
+        <p>Utilisez les flèches directionnelles droite et gauche pour animer le slider</p>
+        <ul id="min-explain">
+            <li>Sélectionnez la station de votre choix à l'aide des marqueurs</li>
+            <li>Une fois votre station choisit une fenêtre de réservation apparaît</li>
+            <li>Vérifiez les informations et la quantité de vélos disponibles</li>
+            <li>La partie réservation apparaît plus bas. Signez dans l'encart "Signature"</li>
+            <li>En avant ! FLAT BYCYLE vous souhaite bonne route. Stay safe !</li>
+        </ul>
+        <div class="container slider">
+            <ul>
+                <li id="slider3">
+                    <img id="imgSlider3" src="img/slider/3.png" alt="" width="970" height="460">
+                </li>
+                <li id="slider2">
+                    <img id="imgSlider2" src="img/slider/2.png" alt="" width="970" height="460">
+                </li>
+                <li id="slider">
+                    <img id="imgSlider1" src="img/slider/1.png" alt="" width="970" height="460">
+                </li>
+            </ul>
+            <!--END SLIDER-->
+        </div>
+    </section>
+
+
+    <!--MAP-->
+    <div class="title-app">
+        <h2>APPLICATION</h2>
+    </div>
+    <p class="info-molette">Vous pouver zoomer sur la carte à l'aide de CTRL gauche + molette de défilement</p>
+    <section class="container-fluid map" id="app">
+        <div id="map"></div>
+        <span class="button-hide-reservation">
+            <span>Fermer la fenêtre de réservation</span>
+        </span>
+        <div class="container reservation-window" id="getReservation">
+            <form action="">
+                <p id="station_name"></p>
+                <p id="station_address"></p>
+                <p id="bike_available"></p>
+                <p id="stands_available"></p>
+                <p id="status"></p>
+            </form>
+            <h3>Votre signature</h3>
+            <button class="btn-info signature" id="Signature">Signez votre réservation</button>
+            <canvas id="canvas" width="400" height="200" style="margin: 0;"></canvas>
+            <div id="Reservation" class="btn-success">Réserver</div>
+        </div>
+    </section>
+    <!--END MAP-->
+
+    <!--RÉSERVATION-->
+    <section class="container-fluid reservation" id="reserv">
+        <h2>VOTRE RESERVATION</h2>
+        <span>
+            <p id="title-reservation"></p>
+        </span>
+        <span>
+            <p id="count-timer"></p>
+        </span>
+        <button id="annuler">Annuler votre réservation</button>
+    </section>
+
+    <!--END RÉSERVATION-->
+    <div id="circle">
+        <img src="img/arrowTop.png" alt="" width="35" height="35">
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjXlzKYIi0HO7qfdTxUE5G5RKD5wjHjeA&libraries=places&callback=appMap">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <!--Application-->
+    <script src="js/Scrolltop.js"></script>
+    <script src="js/Slider.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/Reservation.js"></script>
+    <script src="js/Timers.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/Googlemap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/App.js"></script>
+</body>
+
+</html>

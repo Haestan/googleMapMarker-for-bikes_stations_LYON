@@ -1,0 +1,91 @@
+@media all and (max-width: 780px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        display: flex;
+    }
+    .slider{
+        display: none;
+    }
+    nav img{
+        float: left;
+    }
+    nav .hamb-menu-icon{
+        visibility: visible;
+    }
+    nav ul{
+        text-align: center;
+        background: #41413F;
+    }
+    nav ul li{
+        height: 75px;
+    }
+    nav ul li a{
+        font-size:0.8em;
+    }
+    nav ul li:hover{
+        border:none;
+        font-weight: bold;
+    }
+    #home h1{
+        font-size:1.5em;
+    }
+    #home img{
+        width: 100%;
+    }
+    #home h2{
+        font-size: 1em;
+    }
+    .slider ul li {
+        display: none;
+    }
+    #map{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #fonction p{
+        display: none;
+    }
+    #min-explain{
+        display: block;
+        text-align: center;
+        padding: 50px;
+        list-style: circle;
+    }
+    #min-explain li{
+        padding-top: 25px;
+        color: #ecf0f1;
+    }
+    #getReservation{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    #Reservation{
+        display: none !important;
+    }
+    .signature{
+        display: block;
+        width: 200px;
+        border: none;
+        margin: 50px auto;
+        cursor: pointer;
+    }
+    #canvas{
+        display: none !important;
+    }
+    #reserv{
+        height: 400px;
+    }
+    #title-reservation{
+        font-size: 0.9em;
+    }
+    #count-timer{
+        font-size: 0.9em;
+    }
+}

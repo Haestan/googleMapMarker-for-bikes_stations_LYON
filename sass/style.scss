@@ -1,0 +1,297 @@
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Open Sans Condensed", sans-serif;
+  background: #fefff3;
+  overflow-x: hidden;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0px 1px 5px #32343c;
+  background: $colorheader;
+  color: $colortypo;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  #btn-responsive {
+    color: $colortypo;
+  }
+  ul li a {
+    color: $colortypo;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+}
+
+.list-menu-items .list-menu a {
+  text-decoration: none;
+  color: $colortypo;
+}
+
+.btn {
+  top: 200px;
+  right: 20px;
+  height: 2px;
+  width: 5px;
+  color: $colortypo;
+}
+
+.content-information {
+  padding-top: 200px;
+  text-align: center;
+  img {
+    padding: 55px;
+  }
+  h2 {
+    padding: 40px;
+  }
+}
+
+#home h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#fonction p {
+  text-align: center;
+  color: $colortypo;
+  padding-top: 20px;
+}
+
+#min-explain {
+  display: none;
+}
+
+.slideshow {
+  height: 700px;
+  background: $colorheader;
+  h2 {
+    text-align: center;
+    padding-top: 50px;
+    text-decoration: underline;
+    color: $colortypo;
+  }
+  h6 {
+    text-align: center;
+    color: $colortypo;
+    padding-top: 20px;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+.slider {
+  border: 1px solid $colortypo;
+  box-shadow: 2px 2px 5px $colortypo;
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+}
+
+#slider {
+  position: absolute;
+  top: 0;
+}
+
+#slider2 {
+  position: absolute;
+  top: 0;
+}
+
+#slider3 {
+  position: absolute;
+  top: 0;
+}
+
+.title-app {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-molette {
+  text-align: center;
+}
+
+.button-hide-reservation {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 150px;
+  display: block;
+  text-align: center;
+  border: 1px solid $colortypo;
+  color: $colortypo;
+  box-sizing: border-box;
+  background: $colorheader;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-2%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+  }
+}
+
+#app {
+  position: relative;
+}
+
+#map {
+  // display: none;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 700px;
+  margin-bottom: 20px;
+}
+
+#getReservation {
+  position: absolute;
+  top: 0;
+  right: 75px;
+  width: 500px;
+  height: 100%;
+  background: $colorheader;
+  color: $colortypo;
+  text-align: center;
+  border: 2px solid #181821;
+  padding: 25px;
+}
+
+#statut {
+  text-align: center;
+}
+
+form {
+  padding: 10px;
+  margin: 15px;
+  text-align: left;
+  p {
+    border-bottom: 1px solid black;
+    padding: 10px;
+  }
+}
+
+.signature{
+  display: none;
+}
+
+#canvas {
+  display: flex;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  background: $colorcanvas;
+  border: 3px solid black;
+}
+
+.reservation-window div {
+  display: inline-block;
+  width: 100px;
+  margin: 0 auto;
+  color: $colortypo;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#Reservation {
+  background: $colorvali;
+  color: $colortypo;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $duration;
+  margin: 0 5px;
+}
+
+#recommencer {
+  background: $coloragain;
+  color: $colortypo;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $duration;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.reservation {
+  position: relative;
+  height: 400px;
+  background: $colorheader;
+}
+
+#reserv h2 {
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: underline;
+  color: #ecf0f1;
+}
+
+#title-reservation {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #ecf0f1;
+  line-height: 200px;
+}
+
+#annuler {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  background: $colordisa;
+  color: $colortypo;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+#title-reservation {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: $colortypo;
+  line-height: 100px;
+}
+
+#count-timer {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: $colortypo;
+}
+
+#circle {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  padding-top: 2px;
+  border-radius: 50%;
+  font-size: 25px;
+  background: $colorheader;
+  text-align: center;
+  cursor: pointer;
+  z-index: 15000;
+  color: $colortypo;
+}
